@@ -47,5 +47,12 @@ Route::group(['prefix' => 'jurusan'], function(){
 Route::get('data-siswa' , [DataSiswaController::class, 'datasiswa']);
 Route::get('data-siswi' , [DataSiswaController::class, 'datasiswi']);
 Route::get('nama/{nama?}',[DataSiswaController::class, 'nama']);
-Route::resource('user', UserController::class);
+Route::resource('user', UserController::class); 
+
+Route::get('profile', function () {
+    return view('profile.index');
+});
+Route::get('album', function () {
+    return view('profile.album');
+});
 ?>
